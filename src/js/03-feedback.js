@@ -30,8 +30,8 @@ function onTextareaInput(event) {
 function showSavedData(event) {
     const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY))
     if (savedData) {
-        textarea.value = savedData.message;
-        emailInput.value = savedData.email;
+        textarea.value = savedData.message || '';
+        emailInput.value = savedData.email || '';
     }
 }
 
